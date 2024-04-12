@@ -1,24 +1,19 @@
 const jobsContainer = document.querySelector(".jobs-list-container .jobs");
-const jobSearch = document.querySelector(".jobs-list-container .job-search");
+const jobSearch = document.querySelector(".job-search");
+const searchButton = document.querySelector(".search-btn");
 
 let searchTerm = "";
-
 
 const createJobListingCards = async () => {
   jobsContainer.innerHTML = "";
 
-
-
   fetch("https://jsonfakery.com/jobs")
     .then(response => response.json())
     .then(j => {
-
-
-      return j.slice(0, 10)
-
-    }).then(jobs => filterAndDisplayJobs(jobs))
+      return j.slice(0, 10);
+    })
+    .then(jobs => filterAndDisplayJobs(jobs))
     .catch(error => console.error('Error:', error));
-
 };
 
 function filterAndDisplayJobs(jobs) {
@@ -47,7 +42,6 @@ function createJobCard(job) {
 
   let detailsBtn = document.createElement("a");
   detailsBtn.href = "#";
-
   detailsBtn.innerHTML = "Apply";
   detailsBtn.classList.add("details-btn");
 
@@ -59,12 +53,9 @@ function createJobCard(job) {
 
 (async function () {
   await createJobListingCards();
+})();
 
-
-
-  jobSearch.addEventListener("input", (e) => {
-    searchTerm = e.target.value;
-
-    createJobListingCards();
-  });
-})()
+searchButton.addEventListener("click", () => {
+  searchTerm = jobSearch.value;
+  createJobListingCards();
+});
