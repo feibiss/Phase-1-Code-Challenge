@@ -1,28 +1,22 @@
-const jobs = [
- 
-];
-
-
 const jobsContainer = document.querySelector(".jobs-list-container .jobs");
 const jobSearch = document.querySelector(".jobs-list-container .job-search");
 
 let searchTerm = "";
 
 
-
 const createJobListingCards = async () => {
   jobsContainer.innerHTML = "";
 
-  fetch('db.json')
+
+
+  fetch("https://jsonfakery.com/jobs")
     .then(response => response.json())
-    .then(d => {
+    .then(j => {
 
-      const jobs = d.data;
-      if (jobs.length) {
-        filterAndDisplayJobs(jobs);
-      }
 
-    })
+      return j.slice(0, 10)
+
+    }).then(jobs => filterAndDisplayJobs(jobs))
     .catch(error => console.error('Error:', error));
 
 };
@@ -52,8 +46,8 @@ function createJobCard(job) {
   details.classList.add("details");
 
   let detailsBtn = document.createElement("a");
-  detailsBtn.href = job.url;
-  detailsBtn.target = "_blank";
+  detailsBtn.href = "#";
+
   detailsBtn.innerHTML = "Apply";
   detailsBtn.classList.add("details-btn");
 
