@@ -1,17 +1,33 @@
-// console.log('hiddedn jobs')
+document.getElementById('fetchDataBtn').addEventListener('click', fetchData);
 
-// // const students={
-// //     name :'wanjiru',
-// //     gender : 'female',
-// }
-// console.log(students.name); 
+function fetchData() {
+  fetch('https://arbeitnow.com/api/job-board-api')
+    .then(response => response.json())
+    .then(data => {
+      displayData(data);
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+    });
+}
 
-const age = 10
+function displayData(data) {
+  const jobDataContainer = document.getElementById('jobData');
+  jobDataContainer.innerHTML = ''; // Clear previous data
 
-// if (age<20) {
-//     console.log("you can join moringa");
-// }else if(age >=18 && age <= 300){
-//     console.log("you cna go home");
-// }
-
-
+  if (data && data.data) {
+    data.data.forEach(job => {
+      const jobElement = document.createElement('div');
+      jobElement.classList.add('jobItem');
+      jobElement.innerHTML = `
+        <h2>${job.title}</h2>
+        <p>${job.company_name}</p>
+        <p>${job.description}</p>
+        <a href="${job.url}" target="_blank">View Job</a>
+      `;
+      jobDataContainer.appendChild(jobElement);
+    });
+  } else {
+    jobDataContainer.textContent = 'No jobs found';
+  }
+}

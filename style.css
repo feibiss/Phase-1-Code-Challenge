@@ -1,34 +1,89 @@
+
+#main {
+  
+  margin: 0 auto;
+}
+
 body {
-    font-size: 16px;
-    line-height: 28px;
-    font-weight: 500;
-    background: #ffffff;
-    font-family: 'Jost', sans-serif;
-    font-style: normal;
-  }
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 500;
+  background: #ffffff;
+  font-family: "Jost", sans-serif;
+  font-style: normal;
+}
 
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Align items to the left and right */
+  text-align: center;
+}
 
-  input {
-    background-color: transparent;
-    outline: black;
-    min-width: auto;
-    width: 150px;
-    font-size: 14px;
-    line-height: 20px;
-    padding: 5px 23px;
-    font-weight: 400;
-    border-radius: 10px;
-  }
+.nav ul {
+  padding: 10px 30px;
+  text-align: left;
+}
 
-  button {
-    background-color: rgba(237, 235, 194, 0.968);
-    min-width: auto;
-    outline: transparent;
-    width: 150px;
-    font-size: 14px;
-    line-height: 20px;
-    padding: 5px 23px;
-    font-weight: 400;
-    border-radius: 10px;
-  }
+input {
+  background-color: transparent;
+  outline: black;
+  min-width: auto;
+  width: 150px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 5px 23px;
+  font-weight: 400;
+  border-radius: 10px;
+}
 
+button {
+  background-color: rgba(237, 235, 194, 0.968);
+  min-width: auto;
+  outline: transparent;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 5px 23px;
+  font-weight: 400;
+  border-radius: 10px;
+}
+
+#log-in-btn {
+  margin-left: auto;
+  /* Align to the right */
+}
+
+#sign-up-btn {
+  margin-left: 10px;
+  /* Add some space between buttons */
+}
+
+#banner {
+  background-color: blue;
+  height :fit-content;
+  padding: 20px;
+  color: white;
+}
+
+.search {
+  text-align: left;
+  padding: 20px;
+}
+
+#footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.jobs li {
+  display: inline-block;
+}
+
+.text {
+  font-size: 15px;
+  color: #696969;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+}
