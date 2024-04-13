@@ -173,3 +173,13 @@ body {
   box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
  font-size: 16px;
 }
+
+footer {
+  font-size: 18px;
+  font-family: "Jost", sans-serif;
+  margin-bottom: 80px;
+  margin-top: 80px;
+  color: #333;
+  max-width: 900px;
+  margin: 40px auto;
+}
