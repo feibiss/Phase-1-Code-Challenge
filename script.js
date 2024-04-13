@@ -1,6 +1,8 @@
 const jobsContainer = document.querySelector(".jobs-list-container .jobs");
 const jobSearch = document.querySelector(".job-search");
 const searchButton = document.querySelector(".search-btn");
+const jobFormInputs = document.querySelectorAll(".job-form-input");
+const jobForm = document.querySelector(".job-form");
 
 let searchTerm = "";
 
@@ -58,4 +60,15 @@ function createJobCard(job) {
 searchButton.addEventListener("click", () => {
   searchTerm = jobSearch.value;
   createJobListingCards();
+});
+
+
+async function submitJob() {
+  jobFormInputs.forEach((input) => (input.value = ""));
+  alert("Job successfully submitted!");
+}
+
+jobForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  submitJob();
 });
