@@ -147,7 +147,7 @@ body {
 .job-form {
   font-size: 18px;
   font-family: "Jost", sans-serif;
-  margin: 40px auto 80px;
+  margin: 20px auto 40px;
   color: #333;
   max-width: 900px;
   display: flex;
@@ -181,4 +181,5 @@ footer {
   max-width: 900px;
   margin: 20px auto;
   text-align: center;
+  border-top: 1px solid #ddd;
 }
