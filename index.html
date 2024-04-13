@@ -17,33 +17,42 @@
             <div class="logo">
                 <a href="home">Patakazi</a>
             </div>
-
+        
             <div class="menu">
                 <ul>
                     <li><a href="#featured">Job offers</a></li>
                     <li><a href="#new">Companies</a></li>
                 </ul>
             </div>
-
+        
             <div class="login">
-                <button>Post a Job</button>
+                <a href="#job-form-section">
+                    <button>Post a Job</button>
+                </a>
             </div>
         </div>
 
-
-
-        <div class="container">
-            <div class="banner">
-                <h2>Over 1000 job openings</h2>
-                <h4>Find Jobs, Employment & Career Opportunities</h4>
-            </div>
+       
+        <div class="banner">
+            <h2>Over 1000 job openings</h2>
+            <h4>Find Jobs, Employment & Career Opportunities</h4>
         </div>
+
 
 
         <div class="jobs-list-container">
             <input class="job-search" type="text" placeholder="Job position" />
             <button class="search-btn">Search</button>
             <div class="jobs"></div>
+        </div>
+
+
+        <div class="job-form" id="job-form-section">
+            <form class="job-form">
+                <input type="text" class="job-form-input" placeholder="Job Title" required>
+                <textarea class="job-form-input" placeholder="Job Description" required></textarea>
+                <button type="submit" class="job-form-btn">Submit Job</button>
+            </form>
         </div>
 
         <script src="script.js"></script>

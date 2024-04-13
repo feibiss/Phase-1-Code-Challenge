@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fefbf6;
-
 }
 
 
@@ -141,3 +140,32 @@ body {
   color: #fff;
 }
 
+.job-form {
+  font-size: 18px;
+  font-family: "Jost", sans-serif;
+  margin: 40px auto 80px;
+  color: #333;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+}
+
+.job-form-input {
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+  /
+}
+
+.job-form-btn {
+  padding: 10px 16px;
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #023047;
+  box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
+ font-size: 16px;
+}
