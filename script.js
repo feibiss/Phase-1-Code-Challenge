@@ -40,14 +40,14 @@ function createJobCard(job) {
   details.innerHTML = job.description;
   details.classList.add("details");
 
-  let detailsBtn = document.createElement("a");
-  detailsBtn.href = "#";
-  detailsBtn.innerHTML = "Apply";
-  detailsBtn.classList.add("details-btn");
+  let applyBtn = document.createElement("a");
+  applyBtn.href = "#";
+  applyBtn.innerHTML = "Apply";
+  applyBtn.classList.add("apply-btn");
 
   jobCard.appendChild(title);
   jobCard.appendChild(details);
-  jobCard.appendChild(detailsBtn);
+  jobCard.appendChild(applyBtn);
   jobsContainer.appendChild(jobCard);
 }
 
