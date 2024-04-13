@@ -15,7 +15,6 @@ const createJobListingCards = async () => {
       return j.slice(0, 10);
     })
     .then(jobs => filterAndDisplayJobs(jobs))
-    .catch(error => console.error('Error:', error));
 };
 
 function filterAndDisplayJobs(jobs) {
@@ -65,7 +64,7 @@ searchButton.addEventListener("click", () => {
 
 async function submitJob() {
   jobFormInputs.forEach((input) => (input.value = ""));
-  alert("Job successfully submitted!");
+  alert("The job has been successfully submitted!");
 }
 
 jobForm.addEventListener("submit", (event) => {
