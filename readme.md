@@ -2,7 +2,7 @@
 
 12/04/2024
 
-Patakazi helps new developers find remote jobs modern languages all around the world.
+Patakazi is one page jobsite that helps job seekers fast. The code uses https://jsonfakery.com/jobs to populate the data
 
 ### Features
 
@@ -12,3 +12,7 @@ Patakazi helps new developers find remote jobs modern languages all around the w
 ## Author :black_nib:
 
 - **Fabian likam**
+
+## Licence:
+
+The Laravel framework is open-sourced software licensed under the MIT license.
